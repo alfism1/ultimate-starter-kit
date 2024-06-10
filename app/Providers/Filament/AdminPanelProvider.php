@@ -56,6 +56,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+            ])
+            ->resources([
+                config('filament-logger.activity_resource')
             ]);
     }
 }
