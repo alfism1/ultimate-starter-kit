@@ -7,6 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About Project
+
+This is my ultimate Laravel Project starter.
+
+Installed dependencies:
+
+- Laravel Breeze
+
+  - With Inertia React JS, SSR, Typescript
+
+- <https://filamentphp.com/>
+  
+  - <https://filamentphp.com/plugins/filament-spatie-media-library>
+
+    - <https://spatie.be/docs/laravel-medialibrary/v11/basic-usage/preparing-your-model>
+
+  - <https://filamentphp.com/plugins/bezhansalleh-shield>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
