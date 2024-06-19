@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "alfism1/ultimate-starter-kit",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "The Ultimate Starter Kit for Laravel Filament with Laravel Breeze and Inertia.js (Typescript)",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
