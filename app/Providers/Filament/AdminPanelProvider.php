@@ -32,6 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors(fn(GeneralSettings $settings) => $settings->site_theme)
             ->favicon(fn(GeneralSettings $settings) => Storage::url($settings->site_favicon))
             ->brandName(fn(GeneralSettings $settings) => $settings->site_name)
+            ->brandLogoHeight(fn(GeneralSettings $settings) => $settings->logo_height)
             ->brandLogo(fn(GeneralSettings $settings) => Storage::url($settings->site_logo))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

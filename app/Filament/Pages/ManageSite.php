@@ -58,16 +58,16 @@ class ManageSite extends SettingsPage
         return $form
             ->schema([
                 Forms\Components\Section::make('Site')
-                    ->label(fn() => __('Manage Site Settings Here.'))
-                    ->description(fn() => __(''))
+                    ->label(fn () => __('Manage Site Settings Here.'))
+                    ->description(fn () => __(''))
                     // ->icon('fluentui-web-asset-24-o')
                     ->schema([
                         Forms\Components\Grid::make()->schema([
                             Forms\Components\TextInput::make('site_name')
-                                ->label(fn() => __('Site name'))
+                                ->label(fn () => __('Site name'))
                                 ->required(),
                             Forms\Components\Select::make('site_active')
-                                ->label(fn() => __('Site Active'))
+                                ->label(fn () => __('Site Active'))
                                 ->options([
                                     0 => "Not Active",
                                     1 => "Active",
@@ -78,17 +78,20 @@ class ManageSite extends SettingsPage
                         Forms\Components\Grid::make()->schema([
                             Forms\Components\Grid::make()->schema([
                                 Forms\Components\FileUpload::make('site_logo')
-                                    ->label(fn() => __('Site Logo'))
+                                    ->label(fn () => __('Site Logo'))
                                     ->image()
                                     // ->directory('sites')
                                     // ->visibility('public')
                                     // ->moveFiles()
                                     ->required()
                                     ->columnSpan(2),
+                                Forms\Components\TextInput::make('logo_height')
+                                    ->label(fn () => __('Logo Height'))
+                                    ->columnSpan(2),
                             ])
                                 ->columnSpan(2),
                             Forms\Components\FileUpload::make('site_favicon')
-                                ->label(fn() => __('Site Favicon'))
+                                ->label(fn () => __('Site Favicon'))
                                 ->image()
                                 ->directory('sites')
                                 ->visibility('public')
@@ -102,19 +105,19 @@ class ManageSite extends SettingsPage
                         Forms\Components\Tabs\Tab::make('Color Palette')
                             ->schema([
                                 Forms\Components\ColorPicker::make('site_theme.primary')
-                                    ->label(fn() => __('Primary'))->rgb(),
+                                    ->label(fn () => __('Primary'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.secondary')
-                                    ->label(fn() => __('Secondary'))->rgb(),
+                                    ->label(fn () => __('Secondary'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.gray')
-                                    ->label(fn() => __('gray'))->rgb(),
+                                    ->label(fn () => __('gray'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.success')
-                                    ->label(fn() => __('success'))->rgb(),
+                                    ->label(fn () => __('success'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.danger')
-                                    ->label(fn() => __('danger'))->rgb(),
+                                    ->label(fn () => __('danger'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.info')
-                                    ->label(fn() => __('info'))->rgb(),
+                                    ->label(fn () => __('info'))->rgb(),
                                 Forms\Components\ColorPicker::make('site_theme.warning')
-                                    ->label(fn() => __('warning'))->rgb(),
+                                    ->label(fn () => __('warning'))->rgb(),
                             ])
                             ->columns(3),
                     ])

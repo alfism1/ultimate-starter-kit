@@ -7,6 +7,7 @@ return new class extends SettingsMigration {
     {
         $this->migrator->add('general.site_name', 'Spatie');
         $this->migrator->add('general.site_logo', '');
+        $this->migrator->add('general.logo_height', '100');
         $this->migrator->add('general.site_active', true);
         $this->migrator->add('general.site_favicon', 'sites/logo.ico');
         $this->migrator->add('general.site_theme', [
