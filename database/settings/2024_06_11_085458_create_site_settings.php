@@ -25,6 +25,7 @@ return new class extends SettingsMigration {
     {
         $this->migrator->deleteIfExists('general.site_name');
         $this->migrator->deleteIfExists('general.site_logo');
+        $this->migrator->deleteIfExists('general.logo_height');
         $this->migrator->deleteIfExists('general.site_active');
         $this->migrator->deleteIfExists('general.site_favicon');
         $this->migrator->deleteIfExists('general.site_theme');
