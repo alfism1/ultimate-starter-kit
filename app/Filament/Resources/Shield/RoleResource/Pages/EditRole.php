@@ -13,7 +13,24 @@ class EditRole extends EditRecord
 {
     protected static string $resource = RoleResource::class;
 
+
     public Collection $permissions;
+
+    /**
+     * Authorize the user to perform the action.
+     * An extension of the parent method to forbid editing the super admin role.
+     * It's not throught the constructor because the record is not yet set.
+     */
+    protected function authorizeAccess(): void
+    {
+        parent::authorizeAccess();
+
+        if ($this->record->name === config('filament-shield.super_admin.name')) {
+            // forbid super admin role to be edited
+            abort(403);
+        }
+    }
+
 
     protected function getActions(): array
     {
@@ -26,7 +43,7 @@ class EditRole extends EditRecord
     {
         $this->permissions = collect($data)
             ->filter(function ($permission, $key) {
-                return ! in_array($key, ['name', 'guard_name', 'select_all']);
+                return !in_array($key, ['name', 'guard_name', 'select_all']);
             })
             ->values()
             ->flatten()
