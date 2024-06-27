@@ -8,7 +8,7 @@ export default defineConfig({
             input: [
                 "resources/js/app.tsx",
                 "resources/css/app.css",
-                "resources/js/app.js",
+                // "resources/js/app.js",
             ],
             ssr: "resources/js/ssr.tsx",
             refresh: [...refreshPaths, "app/Livewire/**"],
