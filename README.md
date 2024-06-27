@@ -1,48 +1,100 @@
 <p align="center"><img src="https://raw.githubusercontent.com/alfism1/ultimate-starter-kit/master/ultimate-starter-kit.png" width="400" alt="Ultimate Starter Kit"></p>
 
-## About Project
+# Ultimate Starter Kit
 
-This is my ultimate Laravel Project starter.
+This is the ultimate starter kit for Laravel projects, designed to help you quickly set up and get started with modern web development practices.
 
-Installed dependencies:
+## Features
 
-- Laravel Breeze
+- **Laravel Breeze**
+  - Inertia.js with React, SSR, and TypeScript
+- **Filament**
+  - [Filament PHP](https://filamentphp.com)
+  - [Spatie Media Library Plugin](https://filamentphp.com/plugins/filament-spatie-media-library)
+  - [Shield Plugin](https://filamentphp.com/plugins/bezhansalleh-shield)
 
-  - With Inertia React JS, SSR, Typescript
+## Requirements
 
-- <https://filamentphp.com/>
-  
-  - <https://filamentphp.com/plugins/filament-spatie-media-library>
-
-    - <https://spatie.be/docs/laravel-medialibrary/v11/basic-usage/preparing-your-model>
-
-  - <https://filamentphp.com/plugins/bezhansalleh-shield>
-
-## Requirement
-
-- `PHP Version >= ^8.2`
+- PHP >= 8.2
 
 ## Installation
 
-- `cp .env.example .env`
+1. Clone the repository:
 
-- Configure `.env` file
+   ```sh
+   git clone https://github.com/alfism1/ultimate-starter-kit.git
+   cd ultimate-starter-kit
+   ```
 
-- `php artisan key:generate`
+2. Copy and configure the environment file:
 
-- `php artisan migrate`
+   ```sh
+   cp .env.example .env
+   # Edit the .env file to configure your environment
+   ```
 
-- `php artisan db:seed`
+3. Install dependencies:
 
-- `php artisan shield:super-admin`
+   ```sh
+   composer install
+   npm install
+   ```
 
-## Run Project
+4. Generate the application key:
 
-- Development: `npm run dev`
-- Production: `npm run build`
+   ```sh
+   php artisan key:generate
+   ```
 
-## Add New Policy
+5. Run database migrations and seeders:
 
-- `php artisan make:policy ResourceNamePolicy`
+   ```sh
+   php artisan migrate
+   php artisan db:seed
+   ```
 
-- Configure the created policy `app/Policies/ResourceNamePolicy.php`
+6. Create a super admin:
+
+   ```sh
+   php artisan shield:super-admin
+   ```
+
+## Usage
+
+### Development
+
+To start the development server:
+
+```sh
+npm run dev
+```
+
+### Production
+
+To build the project for production:
+
+```sh
+npm run build
+```
+
+## Adding New Policies
+
+To create a new policy:
+
+```sh
+php artisan make:policy ResourceNamePolicy
+```
+
+Then configure the created policy in `app/Policies/ResourceNamePolicy.php`.
+
+## Contributing
+
+Feel free to submit issues or pull requests. Contributions are welcome!
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+For more details, visit the [repository](https://github.com/alfism1/ultimate-starter-kit).
