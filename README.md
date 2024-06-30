@@ -46,14 +46,20 @@ This is the ultimate starter kit for Laravel projects, designed to help you quic
    php artisan key:generate
    ```
 
-5. Run database migrations and seeders:
+5. Linking storage:
+
+   ```sh
+   php artisan storage:link
+   ```
+
+6. Run database migrations and seeders:
 
    ```sh
    php artisan migrate
    php artisan db:seed
    ```
 
-6. Create a super admin:
+7. Create a super admin:
 
    ```sh
    php artisan shield:super-admin
