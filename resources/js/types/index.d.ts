@@ -5,6 +5,13 @@ export interface User {
     name: string;
     email: string;
     email_verified_at: string;
+    roles: Role[];
+}
+
+interface Role {
+    guard_name: string;
+    id: number;
+    name: string;
 }
 
 export type PageProps<T extends Record<string, unknown> = Record<string, unknown>> = T & {
