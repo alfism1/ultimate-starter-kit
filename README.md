@@ -11,6 +11,7 @@ This is the ultimate starter kit for Laravel projects, designed to help you quic
 - **Filament**
   - [Filament PHP](https://filamentphp.com)
   - [Spatie Media Library Plugin](https://filamentphp.com/plugins/filament-spatie-media-library)
+  - [Image Optimizer](https://github.com/joshembling/image-optimizer)
   - [Shield Plugin](https://filamentphp.com/plugins/bezhansalleh-shield)
 
 ## Requirements
