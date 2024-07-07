@@ -84,6 +84,12 @@ To build the project for production:
 npm run build
 ```
 
+### Run Jobs
+
+```sh
+php artisan queue:work
+```
+
 ## Adding New Policies
 
 To create a new policy:
